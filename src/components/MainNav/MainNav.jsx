@@ -10,7 +10,7 @@ import TvIcon from '@material-ui/icons/Tv';
 
 const useStyles = makeStyles({
   root: {
-    width: 2000,
+    width: "100%",
     position: "fixed",
     bottom: 0,
     backgroundColor: "#2d313a",

@@ -1,9 +1,10 @@
 import React from 'react';
-import style from "./header.module.css"
+import style from "./header.module.css";
+
 const Header = () => {
   return (
     <div>
-      <span className={style.header}>🎬 Entertainment hub 🎥</span>
+      <span onClick={() => window.scroll(0 ,0)} className={style.header}>🎬 Entertainment hub 🎥</span>
     </div>
   );
 };
