@@ -12,19 +12,19 @@ const Movies = () => {
   const [numOfPages, setNumOfPages] = useState();
   const [selectedGenres, setSelectedGenres] = useState([]);
   const [genres, setGenres] = useState([]);
-  const genreforURL = useGeneres(selectedGenres);
+  const genreForURL = useGeneres(selectedGenres);
 
   const fetchMovies = async () => {
     const {data} = await axios.get(`
-   https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}`)
-    // console.log('this is data movies', data);
+   https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreForURL}`)
     setContent(data.results);
     setNumOfPages(data.total_pages);
   };
 
   useEffect(() => {
     fetchMovies()
-  }, [genreforURL, page])
+  }, [genreForURL, page]);
+
   return (
     <div>
       <span className='pageTitle'>Discover Movies</span>
