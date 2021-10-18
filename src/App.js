@@ -8,7 +8,6 @@ import Trending from "./components/Pages/Trending/Trending";
 import Movies from "./components/Pages/Movies/Movies";
 import Series from "./components/Pages/Series/Series";
 import Search from "./components/Pages/Search/Search";
-
 function App() {
   return (
     <BrowserRouter>

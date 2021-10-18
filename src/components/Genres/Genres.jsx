@@ -25,14 +25,16 @@ const Genres = ({
     setPage(1);
   }
   const fetchGenres = async () => {
-    const {data} = await axios.get(`https://api.themoviedb.org/3/genre/${type}/list?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
-    console.log('this is data genres', data);
-    setGenres(data.genres);
-
+    try {
+      const {data} = await axios.get(`https://api.themoviedb.org/3/genre/${type}/list?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`);
+      console.log('this is data genres', data);
+      setGenres(data.genres);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() => {
-    console.log('this is useeffect')
     fetchGenres();
     return () => {
       setGenres({})
