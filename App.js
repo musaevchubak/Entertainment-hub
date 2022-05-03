@@ -1,7 +1,7 @@
 import './App.css';
 import React from "react";
 import Header from "./components/Header/Header";
-import SimpleBottomNavigation from "../src/components/MainNav/MainNav";
+import SimpleBottomNavigation from "./components/MainNav/MainNav";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import Container from "@material-ui/core/Container";
 import Trending from "./components/Pages/Trending/Trending";
